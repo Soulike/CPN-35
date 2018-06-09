@@ -165,9 +165,9 @@ async function getModalMaxPosition()
             const pos0 = $('div[data-nodeid=0]').position();
             const minLeft = pos0.left;
             const minTop = pos0.top;
-            const pos47 = $('div[data-nodeid=47]').position();
-            const maxLeft = pos47.left;
-            const maxTop = pos47.top;
+            const pos34 = $('div[data-nodeid=34]').position();
+            const maxLeft = pos34.left;
+            const maxTop = pos34.top;
             resolve(
                 {
                     minLeft,
