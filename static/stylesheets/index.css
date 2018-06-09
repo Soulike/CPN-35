@@ -1,0 +1,101 @@
+html
+{
+    font-size: 15px;
+    overflow: auto;
+}
+
+#main
+{
+    min-width: 90rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.icon, .hor-line, .vertical-short-line, .vertical-long-line
+{
+    display: inline-block;
+}
+
+.icon
+{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.no-line-row > .icon
+{
+    margin-right: 13.38rem;
+}
+
+.no-line-row > .icon:last-child
+{
+    margin-right: 0;
+}
+
+.hor-line
+{
+    height: 0.5rem;
+    /*width: 8.9rem;*/
+    width: 13.1rem;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    transform: translateY(-100%);
+}
+
+.vertical-line
+{
+    border-left: 1px solid;
+    border-right: 1px solid;
+    width: 0.5rem;
+    /*margin-right: 10.65rem;*/
+    margin-right: 14.78rem;
+}
+
+.vertical-short-line
+{
+    height: 1.5rem;
+}
+
+.vertical-short-line:last-child
+{
+    margin-right: 0;
+}
+
+.vertical-long-line
+{
+    height: 4rem;
+}
+
+.vertical-long-line:last-child
+{
+    margin-right: 0;
+}
+
+.line
+{
+    border-color: #AAA;
+    outline-color: #AAA;
+}
+
+.connected.line
+{
+    border-color: #000;
+}
+
+.connected.hor-line
+{
+    background: #F00;
+    background: linear-gradient(to bottom, #900, #B00, #F00, #B00, #900);
+}
+
+.connected.vertical-line
+{
+    background: #F00;
+    background: linear-gradient(to right, #900, #B00, #F00, #B00, #900);
+}
