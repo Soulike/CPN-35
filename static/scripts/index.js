@@ -168,12 +168,13 @@ $(() =>
                     delete processedLines[key];
                 }
             }
-
         }
 
         //TODO: 生产环境去除
         if (DEBUG)
         {
+            console.log(`新的连接状态 (原始数据)`);
+            console.log(processedLinesCopy);
             console.log(`新的连接状态`);
             console.log(processedLines);
         }
