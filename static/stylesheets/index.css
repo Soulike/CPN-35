@@ -24,7 +24,6 @@ html
     height: 2rem;
     cursor: pointer;
     background-size: cover;
-    background-image: url("../images/0.png");
 }
 
 .no-line-row > .icon
