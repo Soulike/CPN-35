@@ -110,7 +110,7 @@ $(async () =>
 /*Socket 部分*/
 $(() =>
 {
-    const socket = io(`http://${SERVER.DOMAIN}:${SERVER.PORT}`);
+    const socket = io();
 
     socket.on('connect', () =>
     {
@@ -177,11 +177,11 @@ $(() =>
         }
 
         /*筛选完毕后，将进行迭代。如果a-b在对象中不存在，就删除connected属性*/
-        for (let i = 0; i < 42; i++)//出发点最大编号41
+        for (let i = 0; i < 24; i++)//出发点最大编号33
         {
-            for (let j = i + 1; j < 48 && j - i <= 6; j++)//结束点最大编号48且两者最大差值6
+            for (let j = i + 1; j < 35 && j - i <= 7; j++)//结束点最大编号34且两者最大差值7
             {
-                if (j - i === 1 || j - i === 6) // 相邻才做判断，否则忽略
+                if (j - i === 1 || j - i === 7) // 相邻才做判断，否则忽略
                 {
                     if (Object.is(processedLines[`${i}-${j}`], undefined))
                     {
