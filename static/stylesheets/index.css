@@ -4,6 +4,12 @@ html
     overflow: auto;
 }
 
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: green;
+}
+
 #main
 {
     min-width: 95rem;
@@ -112,6 +118,7 @@ html
 {
     display: inline-block;
     cursor: pointer;
+    opacity: 1;
 }
 
 .elevator-line
