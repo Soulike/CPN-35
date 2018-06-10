@@ -173,14 +173,12 @@ $(() =>
         //TODO: 生产环境去除
         if (DEBUG)
         {
-            console.log(`新的连接状态 (原始数据)`);
-            console.log(processedLinesCopy);
             console.log(`新的连接状态`);
             console.log(processedLines);
         }
 
         /*筛选完毕后，将进行迭代。如果a-b在对象中不存在，就删除connected属性*/
-        for (let i = 0; i < 24; i++)//出发点最大编号33
+        for (let i = 0; i < 34; i++)//出发点最大编号33
         {
             for (let j = i + 1; j < 35 && j - i <= 7; j++)//结束点最大编号34且两者最大差值7
             {
