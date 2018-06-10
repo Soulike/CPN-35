@@ -104,15 +104,22 @@ html
 
 .elevator
 {
-    display: none;
+    opacity: 0;
+    cursor: default;
 }
 
-.elevator.connected
+.elevator[data-floor='0']
 {
     display: inline-block;
+    cursor: pointer;
 }
 
-.elevator-line:not(.connected)
+.elevator-line
 {
-    border: none;
+    opacity: 0;
+}
+
+.elevator-line[data-connectNodes='0-35']
+{
+    opacity: 1;
 }

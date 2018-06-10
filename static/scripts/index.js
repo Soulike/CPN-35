@@ -180,9 +180,9 @@ $(() =>
         /*筛选完毕后，将进行迭代。如果a-b在对象中不存在，就删除connected属性*/
         for (let i = 0; i < 34; i++)//出发点最大编号33
         {
-            for (let j = i + 1; j < 35 && j - i <= 7; j++)//结束点最大编号34且两者最大差值7
+            for (let j = i + 1; j < 35; j++)//结束点最大编号34且两者最大差值7
             {
-                if (j - i === 1 || j - i === 7) // 相邻才做判断，否则忽略
+                if (j - i === 1 || j - i === 7 || (i === 0 && j === 35)) // 相邻才做判断，否则忽略
                 {
                     if (Object.is(processedLines[`${i}-${j}`], undefined))
                     {
@@ -194,17 +194,17 @@ $(() =>
                     }
                 }
 
-                if (j === 35)//如果涉及电梯，特殊处理
-                {
-                    const floor = Math.floor(i / 7);
-                    const $elevators = $('.elevator');
-                    const $elevatorToShow = $(`*[data-floor=${floor}]`);
-                    for(let elevator of $elevators)
-                    {
-                        $(elevator).removeClass('connected');
-                    }
-                    $elevatorToShow.addClass('connected');
-                }
+                /*if (j === 35)//如果涉及电梯，特殊处理，目前废弃
+                 {
+                 const floor = Math.floor(i / 7);
+                 const $elevators = $('.elevator');
+                 const $elevatorToShow = $(`*[data-floor=${floor}]`);
+                 for(let elevator of $elevators)
+                 {
+                 $(elevator).removeClass('connected');
+                 }
+                 $elevatorToShow.addClass('connected');
+                 }*/
             }
         }
     });
