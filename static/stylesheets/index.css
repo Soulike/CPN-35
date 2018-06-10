@@ -55,6 +55,8 @@ html
     width: 0.5rem;
     /*margin-right: 10.65rem;*/
     margin-right: 11.64rem;
+    position: relative;
+    left: 6.35rem;
 }
 
 .vertical-short-line
@@ -98,4 +100,19 @@ html
 {
     background: #F00;
     background: linear-gradient(to right, #900, #B00, #F00, #B00, #900);
+}
+
+.elevator
+{
+    display: none;
+}
+
+.elevator.connected
+{
+    display: inline-block;
+}
+
+.elevator-line:not(.connected)
+{
+    border: none;
 }

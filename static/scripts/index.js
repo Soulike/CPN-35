@@ -193,6 +193,18 @@ $(() =>
                         $(`.line[data-connectnodes=${i}-${j}]`).addClass('connected');
                     }
                 }
+
+                if (j === 35)//如果涉及电梯，特殊处理
+                {
+                    const floor = Math.floor(i / 7);
+                    const $elevators = $('.elevator');
+                    const $elevatorToShow = $(`*[data-floor=${floor}]`);
+                    for(let elevator of $elevators)
+                    {
+                        $(elevator).removeClass('connected');
+                    }
+                    $elevatorToShow.addClass('connected');
+                }
             }
         }
     });
